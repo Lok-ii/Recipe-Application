@@ -8,6 +8,7 @@ import DetailsPage from "./Components/Details/DetailsPage";
 import { Children } from "react";
 
 function App() {
+  document.title = "Recipes";
   const router = createBrowserRouter([
     {
       path: "/",

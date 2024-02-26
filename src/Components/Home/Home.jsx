@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import RecipeCard from "./RecipeCard";
 import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
-import LeftArrow from "../../../../movies-app/src/Components/SliderArrows/LeftArrow";
-import RightArrow from "../../Components/SliderArrows/RightArrow";
+import LeftArrow from "../SliderArrows/LeftArrow";
+import RightArrow from "../SliderArrows/RightArrow";
 import Footer from "./Footer";
 
 const Home = () => {

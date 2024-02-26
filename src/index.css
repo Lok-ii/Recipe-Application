@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87); */
+  background-color: #04152D;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slick-prev{
+  left: -50px !important;
+  background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%) !important;
+  border-radius: 50%;
+  fill: white;
+}
+
+
+.slick-next{
+  right: -50px !important;
+  background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68 100%) !important;
+  border-radius: 50%;
+  fill: white;
+}
+
+
+.slick-list{
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.slick-track{
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+.slick-slide{
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.dangerousSummary a{
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease-in-out;
+}
+
+.dangerousSummary a:hover{
+  color: rgb(218, 47, 104);
+}
+
+.heart{
+  width: 80px;
+  height: 80px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+.is-active{
+  transition-duration: 1s;
+  background-position: -2800px 0;
+}

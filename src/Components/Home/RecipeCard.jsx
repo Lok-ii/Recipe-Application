@@ -13,7 +13,7 @@ const RecipeCard = ({ data }) => {
   const ratingColor = 5 >= 7 ? "#008101" : "#FFA401";
   return (
     <div
-      className="cursor-pointer w-[32%] flex flex-col item-center"
+      className="cursor-pointer w-full tablet:w-[48%] laptop:w-[32%] flex flex-col item-center"
       key={data.id}
     >
       <div className="posterBloc w-full h-[90%] rounded-2xl relative">

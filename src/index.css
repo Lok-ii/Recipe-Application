@@ -39,15 +39,31 @@
 }
 
 
+@media screen and (max-width: 521px){
+  .slick-prev{
+    left: -25px !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+
+  .slick-next{
+    right: -25px !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+}
+
 .slick-list{
   display: flex !important;
   align-items: center !important;
+  /* justify-content: center !important; */
   height: 100% !important;
 }
 
 .slick-track{
   display: flex !important;
   align-items: center !important;
+  /* justify-content: center !important; */
   height: 100% !important;
 }
 
@@ -55,6 +71,7 @@
   height: 100% !important;
   display: flex !important;
   align-items: center !important;
+  justify-content: center !important;
 }
 
 .dangerousSummary a{

@@ -28,24 +28,24 @@ const Home = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 5,
+          slidesToScroll: 5,
           initialSlide: 1,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 4,
+          slidesToScroll: 4,
           initialSlide: 1,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 1,
         },
       },
@@ -86,13 +86,13 @@ const Home = () => {
   return (
     <div className="home w-full text-white flex flex-col items-center pb-8 gap-8">
       <div className="hero w-full h-[90vh] bg-gradientImage bg-top bg-no-repeat	bg-cover mt-[-5rem] flex flex-col justify-center items-center gap-4">
-        <p className="text-[4rem] font-bold tracking-wider	">Welcome.</p>
-        <p className="text-xl font-semibold tracking-wider">
+        <p className="text-[2rem] tablet:text-[4rem] font-bold tracking-wider ">Welcome.</p>
+        <p className="text-md w-[90%] tablet:text-xl font-semibold tracking-wider text-center">
           Thousands of recipes and cuisines to discover. Explore now.
         </p>
         <form
           action=""
-          className="w-[60%] flex items-center rounded-[2rem]"
+          className="w-[95%] tablet:w-[60%] flex items-center rounded-[2rem]"
           onSubmit={(e) => {
             e.preventDefault();
             navigateTo("/search/" + searchRef.current.value);
@@ -106,7 +106,7 @@ const Home = () => {
           ></input>
           <button
             type="submit"
-            className="w-[20%] h-14 rounded-r-[2rem] bg-buttonGradient"
+            className="w-[20%] h-14 text-[0.8rem] tablet:text-[1rem] rounded-r-[2rem] bg-buttonGradient"
           >
             Search
           </button>

@@ -28,7 +28,21 @@ export default {
       backgroundColor: {
         transparentBlack : "rgba(0, 0, 0, 0.5)",
         transparentLogo : "rgba(0, 0, 0, 0.3)",
-      }
+      },
+      screens: {
+        'mobile-small' : '321px',
+        'mobile-medium' : '426px',
+        'mobile-large' : '476px',
+
+        'tablet': '769px',
+        // => @media (min-width: 640px) { ... }
+  
+        'laptop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+      },
 
     },
   },

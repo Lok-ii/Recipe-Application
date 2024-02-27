@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import brandLogo from "../../assets/images/brandLogo.png";
 import { RxCrossCircled } from "react-icons/rx";
+import { FaHeart } from "react-icons/fa6";
 
 
 const Header = () => {
@@ -15,7 +16,7 @@ const Header = () => {
   const topSearchRef = useRef("");
 
   return (
-    <header className="w-full h-[5rem] flex items-center justify-between px-32 py-4 bg-lightBackground backdrop-blur-sm relative">
+    <header className="w-full h-[5rem] flex items-center justify-between px-4 mobile-large:px-12 tablet:px-32 py-4 bg-lightBackground backdrop-blur-sm relative">
       <div className="logo w-[5rem] bg-transparentLogo bg-blend-multiply">
         <NavLink to={"/"}>
           <img className="w-full h-full" src={brandLogo} alt="" />
@@ -24,11 +25,21 @@ const Header = () => {
       <nav className="navbar flex items-center gap-8 text-mainText font-semibold">
         <NavLink
           to={"/liked"}
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-hoverText" : ""
+          className={({ isActive, isPending }) => 
+            `tablet:flex hidden 
+            ${isPending} ? "pending" : ${isActive} ? "text-hoverText" : ""`
           }
         >
           Liked
+        </NavLink>
+        <NavLink
+          to={"/liked"}
+          className={({ isActive, isPending }) =>
+          `tablet:hidden flex 
+          ${isPending} ? "pending" : ${isActive} ? "text-hoverText" : ""`
+          }
+        >
+          <FaHeart />
         </NavLink>
         <CiSearch onClick={hideSearch} className="cursor-pointer" />
         <form

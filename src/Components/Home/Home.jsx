@@ -63,8 +63,6 @@ const Home = () => {
   const navigateTo = useNavigate();
   const { homeRecipeData, cuisineList } = useSelector((state) => state.home);
   useEffect(() => {
-    console.log(location.pathname);
-    console.log(params.search);
     if (location.pathname.includes("/search")) {
       commonParams.query = params.search;
       type = "complexSearch";
@@ -75,7 +73,6 @@ const Home = () => {
     const getData = async () => {
       try {
         const data = await fetchRecipeData("", commonParams, "search");
-        console.log(data.data.results);
         dispatch(setHomeRecipeData(data.data));
       } catch (error) {
         console.log(error);
